@@ -1,6 +1,8 @@
 # Overview
+Let's assume we have a ride hailing service and we want to give our passenger a ride duration prediction. 
+To do that we need to have some statistics based on previously recorded rides.
 
-This repository contains a script to calculate some statistics based on previously recorded rides. 
+This repository contains a highly efficient parallel script to calculate the statistics of previously recorded rides. 
 Each recorded ride consists of a series of entries. Each entry contains the unique identifier of
 the ride, the coordinates of a point (lat, lng) and a UNIX timestamp. 
 Recorded rides are provided as an input CSV file with the following columns: RideID, Lat, Lng, Timestamp.
