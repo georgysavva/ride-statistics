@@ -10,7 +10,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/aggregation"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/aggregation"
 )
 
 func WriteCSVReportToFile(filePath string, report aggregation.StatisticsReport) error {

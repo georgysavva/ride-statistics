@@ -3,10 +3,10 @@ package statistics
 import (
 	"github.com/pkg/errors"
 
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/aggregation"
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/csvoutput"
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/fileread"
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/ride"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/aggregation"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/csvoutput"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/fileread"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/ride"
 )
 
 const defaultBufferSize = 4096

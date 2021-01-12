@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/aggregation"
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/ride"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/aggregation"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/ride"
 )
 
 func TestRidesAggregator(t *testing.T) {

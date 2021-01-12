@@ -10,7 +10,7 @@ import (
 
 	"github.com/emirpasic/gods/maps/treemap"
 
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/ride"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/ride"
 )
 
 type StatisticsReport []*HourStatistics

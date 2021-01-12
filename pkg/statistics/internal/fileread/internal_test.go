@@ -13,7 +13,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/ride"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/ride"
 )
 
 const (

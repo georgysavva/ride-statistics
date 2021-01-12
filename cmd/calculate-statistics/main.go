@@ -4,7 +4,7 @@ import (
 	"flag"
 	"log"
 
-	"github.com/georgysavva/beat-test/pkg/statistics"
+	"github.com/georgysavva/ride-statistics/pkg/statistics"
 )
 
 func main() {

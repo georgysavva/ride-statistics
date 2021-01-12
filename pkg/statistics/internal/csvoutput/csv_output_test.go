@@ -7,8 +7,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/aggregation"
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/csvoutput"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/aggregation"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/csvoutput"
 )
 
 func TestWriteCSVReport(t *testing.T) {

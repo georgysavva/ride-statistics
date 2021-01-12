@@ -1,4 +1,4 @@
-module github.com/georgysavva/beat-test
+module github.com/georgysavva/ride-statistics
 
 go 1.14
 

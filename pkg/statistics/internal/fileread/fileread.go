@@ -12,7 +12,7 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/georgysavva/beat-test/pkg/statistics/internal/ride"
+	"github.com/georgysavva/ride-statistics/pkg/statistics/internal/ride"
 )
 
 func StartFileReaders(filePath string, outs []chan *ride.Row) (func() error, error) {
