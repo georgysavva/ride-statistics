@@ -34,3 +34,11 @@ because we don't depend on data order any more.
 
 The third stage consists of multiple parallel workers responsible for receiving the ride data and aggregating it by the start time and distance. 
 After all rides data is collected it reports the 95th percentile for each start hour and distance range.
+
+## Setup and run
+
+In the project root do:
+
+- Run all tests: `go test -race ./...`
+- Build the binary `go build -o ./ ./...`
+- Run the calculation script with default parameters `./calculate-statistics`
