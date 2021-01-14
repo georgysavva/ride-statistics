@@ -1,46 +1,28 @@
 package main
 
 import (
-	"flag"
-	"fmt"
 	"log"
-	"os"
+
+	"github.com/alexflint/go-arg"
 
 	"github.com/georgysavva/ride-statistics/pkg/statistics"
 )
 
-func main() {
-	var concurrency int
-	flag.IntVar(&concurrency, "concurrency", 64, "number of workers that will process file in parallel")
-	flag.Usage = func() {
-		fmt.Fprintf(
-			flag.CommandLine.Output(),
-			"Usage: %s [options] [input_file] [output_file]\n\n"+
-				"Positional arguments:\n"+
-				"1th argument, input_file - "+
-				"path to the input csv file with recorded rides (default recorded_rides.csv)\n"+
-				"2th argument, output_file - "+
-				"path to the output csv file to write statistics to (default statistics.csv)\n\n"+
-				"Options:\n",
-			os.Args[0],
-		)
-		flag.PrintDefaults()
-	}
-	flag.Parse()
+type Args struct {
+	Concurrency int    `default:"64" help:"number of workers that will process file in parallel"`
+	InputFile   string `arg:"positional" default:"recorded_rides.csv" help:"path to the input csv file with recorded rides [default: recorded_rides.csv]"` // nolint: lll
+	OutputFile  string `arg:"positional" default:"statistics.csv" help:"path to the output csv file to write statistics to [default: statistics.csv]"`     // nolint: lll
+}
 
-	inputFile, outputFile := "recorded_rides.csv", "statistics.csv"
-	if flag.NArg() > 0 {
-		inputFile = flag.Arg(0)
-		if flag.NArg() > 1 {
-			outputFile = flag.Arg(1)
-		}
-	}
+func main() {
+	args := &Args{}
+	arg.MustParse(args)
 
 	log.Printf(
 		"Start calculating rides statitstics; input_file=%s, output_file=%s, concurrency=%d",
-		inputFile, outputFile, concurrency,
+		args.InputFile, args.OutputFile, args.Concurrency,
 	)
-	if err := statistics.CalculateRidesStatistics(inputFile, outputFile, concurrency); err != nil {
+	if err := statistics.CalculateRidesStatistics(args.InputFile, args.OutputFile, args.Concurrency); err != nil {
 		log.Fatal(err)
 	}
 }
